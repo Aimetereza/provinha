@@ -6,6 +6,8 @@ import { HomeScreen } from "../screens/HomeScreen";
 import { SplashScreen } from "../screens/SplashScreen";
 import { darkTheme, defaultTheme, theme } from "../utils/theme";
 import { FormularioScreen } from "../screens/FormularioScreen";
+import { LoginScreen } from "../screens/LoginScreen";
+
 
 const Stack = createNativeStackNavigator();
 const MaterialBottomTab = createMaterialBottomTabNavigator();
@@ -31,6 +33,7 @@ const StackNavigation = () => {
       <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="Home" component={MaterialBottomTabNavigation} />
       <Stack.Screen name="Formulario" component={MaterialBottomTabNavigation} />
+      <Stack.Screen name="Login" component={MaterialBottomTabNavigation} />
     </Stack.Navigator>
   );
 };
@@ -50,9 +53,13 @@ const MaterialBottomTabNavigation = () => {
         name="Formulario"
         component={FormularioScreen}
         options={{
-          tabBarIcon: "pin",
+          tabBarIcon: "clipboard",
         }}
+        
       />
+
+
+
     </MaterialBottomTab.Navigator>
   );
 };

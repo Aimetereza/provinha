@@ -26,9 +26,9 @@ export function HomeScreen() {
         keyboardType="numeric"
       />
 
-      
+
     </View>
-    
+
   );
 }
 

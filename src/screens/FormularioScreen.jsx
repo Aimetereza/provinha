@@ -1,15 +1,18 @@
 import { useState } from "react";
-import { Text, View, CheckBox } from "react-native";
+import { Text, View, CheckBox, Button} from "react-native";
 import { TextInput } from "react-native-paper";
 import { StyleSheet } from "react-native";
+import { LoginScreen } from "./LoginScreen";
+
+
+
 
 export function FormularioScreen() {
 
 
   const [isSelected, setSelection] = useState(false);
-  const [nome, setNome] = useState("");
-  const [altura, setAltura] = useState("1,75");
-  const [peso, setPeso] = useState("");
+  const [nome,] = useState("");
+
   return (
 
     <View style={styles.container}>
@@ -44,17 +47,21 @@ export function FormularioScreen() {
           style={styles.checkbox}
         />
         <Text style={styles.com}>Junte-se a Comunidade</Text>
+
+
       </View>
 
-
-
+        
+      <View style={styles.botao}>
+        <Button
+          title="Enviar"  
+        />
+      </View>
       <Text style={styles.text}>Ja é membro? Faça login</Text>
       <br />
-      <Text style={styles.envio}>Obrigado pelo envio!</Text>
+      <Text style={styles.envio} >Obrigado pelo envio!</Text >
 
-
-
-
+      
     </View>
 
 
@@ -94,9 +101,13 @@ export const styles = StyleSheet.create({
   com: {
     fontSize: "15px",
   },
-  button: {
-    backgroundColor: "black",
+
+  botao: {
+    backgroundColor: "black"
   }
+
+
+
 
 
 
